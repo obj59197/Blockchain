@@ -19,4 +19,4 @@ class Block{
     time_t time;
 
     string calculateHash() const;
-}
+};
