@@ -6,7 +6,7 @@ using namespace std;
 class Block{
   
   public:
-    string strPrevious;
+    string prevHash;
     Block(uint32_t indexIn, const string &dataIn);
     string getHash();
     void mineBlock(uint32_t diff);
