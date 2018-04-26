@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Block {
@@ -6,6 +7,7 @@ public class Block {
 	public String previousHash;
 	private String data; 
 	private long timeStamp; //as number of milliseconds since 1/1/1970.
+	String Time;
 	private int nonce;
 
 	//Block Constructor.
@@ -13,6 +15,7 @@ public class Block {
 		this.data = data;
 		this.previousHash = previousHash;
 		this.timeStamp = new Date().getTime();
+		this.Time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
 		this.hash = calculateHash(); //Making sure we do this after we set the other values.
 	}
 	
